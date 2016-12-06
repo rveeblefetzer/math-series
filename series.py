@@ -39,4 +39,7 @@ def sum_series(n, first=1, second=2):
 
 if __name__ == "__main__":
     # not sure quite yet what to put here.
-    print (fibonacci(2))
+    print (sum_series(10, 2, 3))
+    print (sum_series(1, 5, 6))
+    print (sum_series(2, 4, 8))
+    print (sum_series(5, 1, 2))
