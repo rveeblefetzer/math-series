@@ -23,3 +23,20 @@ def lucas(n):
         return 1
     else:
         return lucas(n - 1) + lucas(n - 2)
+
+
+def sum_series(n, first=1, second=2):
+    """Return the nth value of a user initiated series."""
+    if n < 1:
+        return None
+    elif n == 1:
+        return first
+    elif n == 2:
+        return second
+    else:
+        return sum_series(n - 1) + sum_series(n - 2)
+
+
+if __name__ == "__main__":
+    # not sure quite yet what to put here.
+    print (fibonacci(2))
