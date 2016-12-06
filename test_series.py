@@ -41,10 +41,11 @@ def test_lucas(n, the_answer):
     assert lucas(n) == the_answer
 
 SUM_PARAMS_TABLE = [
-    [10, 2, 3, 89],
+    [10, 2, 3, 144],
     [1, 5, 6, 5],
     [2, 4, 8, 8],
-    [5, 1, 2, 8]
+    [5, 1, 2, 8],
+    [10, 0, 0, 0]
 ]
 
 
@@ -52,4 +53,4 @@ SUM_PARAMS_TABLE = [
 def test_sum(n, first, second, the_answer):
     """Test for nth sum values with input parameters."""
     from series import sum_series
-    assert sum_series(n) == the_answer
+    assert sum_series(n, first, second) == the_answer

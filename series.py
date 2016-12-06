@@ -34,12 +34,10 @@ def sum_series(n, first=1, second=2):
     elif n == 2:
         return second
     else:
-        return sum_series(n - 1) + sum_series(n - 2)
+        return sum_series(n - 1, first, second) + sum_series(n - 2, first, second)
 
 
 if __name__ == "__main__":
-    # not sure quite yet what to put here.
-    print (sum_series(10, 2, 3))
-    print (sum_series(1, 5, 6))
-    print (sum_series(2, 4, 8))
-    print (sum_series(5, 1, 2))
+    print('This module defines functions that implement mathematical series.')
+    print('...')
+    print('fibonacci(2) >>>', fibonacci(2))
