@@ -1,0 +1,3 @@
+#!/home/jordan/math-series/math-series/math-series-env/bin/python3
+import pywatch
+pywatch.main()
