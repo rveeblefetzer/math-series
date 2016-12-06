@@ -38,6 +38,11 @@ def sum_series(n, first=1, second=2):
 
 
 if __name__ == "__main__":
-    print('This module defines functions that implement mathematical series.')
-    print('...')
-    print('fibonacci(2) >>>', fibonacci(2))
+    print ('This module defines functions that implement mathematical series.')
+    print ('...')
+    print ('fibonacci(2) >>>', fibonacci(2))
+    print ('fibonacci(5) >>>', fibonacci(5))
+    print ('lucas(1) >>>', lucas(1))
+    print ('lucas(6) >>>', lucas(6))
+    print ('sum_series(10,2,3) >>>', sum_series(10, 2, 3))
+    print ('sum_series(5,1,2) >>>', sum_series(5, 1, 2))
