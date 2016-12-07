@@ -11,14 +11,6 @@ FIB_PARAMS_TABLE = [
     [13, 144]
 ]
 
-
-@pytest.mark.parametrize("n, the_answer", FIB_PARAMS_TABLE)
-def test_fibonacci(n, the_answer):
-    """Test for nth Fibonacci values."""
-    from series import fibonacci
-    assert fibonacci(n) == the_answer
-
-
 LUCAS_PARAMS_TABLE = [
     [1, 2],
     [2, 1],
@@ -33,13 +25,6 @@ LUCAS_PARAMS_TABLE = [
     [11, 123]
 ]
 
-
-@pytest.mark.parametrize("n, the_answer", LUCAS_PARAMS_TABLE)
-def test_lucas(n, the_answer):
-    """Test for nth lucas values."""
-    from series import lucas
-    assert lucas(n) == the_answer
-
 SUM_PARAMS_TABLE = [
     [10, 2, 3, 144],
     [1, 5, 6, 5],
@@ -47,6 +32,20 @@ SUM_PARAMS_TABLE = [
     [5, 1, 2, 8],
     [10, 0, 0, 0]
 ]
+
+
+@pytest.mark.parametrize("n, the_answer", FIB_PARAMS_TABLE)
+def test_fibonacci(n, the_answer):
+    """Test for nth Fibonacci values."""
+    from series import fibonacci
+    assert fibonacci(n) == the_answer
+
+
+@pytest.mark.parametrize("n, the_answer", LUCAS_PARAMS_TABLE)
+def test_lucas(n, the_answer):
+    """Test for nth lucas values."""
+    from series import lucas
+    assert lucas(n) == the_answer
 
 
 @pytest.mark.parametrize("n, first, second, the_answer", SUM_PARAMS_TABLE)
