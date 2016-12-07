@@ -1,48 +1,76 @@
 """Fibonacci and Lucas Series Functions."""
 
 
+# def fibonacci(n):
+#     """Return the nth value of the fibonacci series."""
+#     if n < 1:
+#         return None
+#     elif n == 1:
+#         return 0
+#     elif n == 2:
+#         return 1
+#     else:
+#         return fibonacci(n - 1) + fibonacci(n - 2)
+
 def fibonacci(n):
-    """Return the nth value of the fibonacci series."""
-    if n < 1:
-        return None
-    elif n == 1:
-        return 0
-    elif n == 2:
-        return 1
-    else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+    """Return nth value of Fibonacci series."""
+    idx = 0
+    result = [0]
+    a, b = 0, 1
+    while idx <= n:
+        result.append(b)
+        a, b = b, a + b
+        idx += 1
+    return result[n - 1]
+
+# def lucas(n):
+#     """Return the nth value of the lucas series."""
+#     if n < 1:
+#         return None
+#     elif n == 1:
+#         return 2
+#     elif n == 2:
+#         return 1
+#     else:
+#         return lucas(n - 1) + lucas(n - 2)
 
 
 def lucas(n):
-    """Return the nth value of the lucas series."""
-    if n < 1:
-        return None
-    elif n == 1:
-        return 2
-    elif n == 2:
-        return 1
-    else:
-        return lucas(n - 1) + lucas(n - 2)
+    """Return nth value of Fibonacci series."""
+    idx = 0
+    result = [2]
+    a, b = 2, 1
+    while idx <= n:
+        result.append(b)
+        a, b = b, a + b
+        idx += 1
+    return result[n - 1] 
 
 
-def sum_series(n, first=1, second=2):
-    """Return the nth value of a user initiated series."""
-    if n < 1:
-        return None
-    elif n == 1:
-        return first
-    elif n == 2:
-        return second
-    else:
-        return sum_series(n - 1, first, second) + sum_series(n - 2, first, second)
+# def sum_series(n, first=1, second=2):
+#     """Return the nth value of a user initiated series."""
+#     if n < 1:
+#         return None
+#     elif n == 1:
+#         return first
+#     elif n == 2:
+#         return second
+#     else:
+#         return sum_series(n - 1) + sum_series(n - 2)
+
+def sum_series(n, first = 0, second = 1):
+     """Return nth value of custom series."""
+
+    idx = 0
+    result = [first]
+    a, b = first, second
+    while idx <= n
+        result.append(b)
+        a, b = b, a + b
+        idx += 1
+    return result[n - 1]
 
 
 if __name__ == "__main__":
-    print ('This module defines functions that implement mathematical series.')
-    print ('...')
-    print ('fibonacci(2) >>>', fibonacci(2))
-    print ('fibonacci(5) >>>', fibonacci(5))
-    print ('lucas(1) >>>', lucas(1))
-    print ('lucas(6) >>>', lucas(6))
-    print ('sum_series(10,2,3) >>>', sum_series(10, 2, 3))
-    print ('sum_series(5,1,2) >>>', sum_series(5, 1, 2))
+    # not sure quite yet what to put here.
+    print (fibonacci(2))
